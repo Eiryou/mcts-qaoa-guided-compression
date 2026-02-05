@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: murakami-compressor-suite
+    env: python
+    plan: standard
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true --browser.gatherUsageStats false
+    envVars:
+      - key: NEO_DEBUG
+        value: "0"

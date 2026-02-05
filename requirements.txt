@@ -1,0 +1,4 @@
+streamlit>=1.41.0
+numpy>=1.26.0
+pillow>=10.0.0
+scikit-image==0.24.0
