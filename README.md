@@ -5,6 +5,7 @@ with **Quantum-Inspired Sampling** and optional **QAOA(p=1) Fusion** (classical 
 
 **Author / Developer:** Hideyoshi Murakami  
 **X:** @nagisa7654321
+## X(Twitter): https://x.com/nagisa7654321
 
 > **Disclaimer**
 > This project does **not** claim quantum speedup or quantum hardware advantage.
