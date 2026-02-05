@@ -1,54 +1,96 @@
 # Murakami Compressor Suite
+> **Compression is not a preset — it’s a search (Probe → Final).**
 
-**“Compression is not a preset — it’s a search (Probe → Final).”**
-
-**Search-Based Compression** for Images + Audio/Video  
-with **Quantum-Inspired Sampling** and optional **QAOA(p=1) Fusion** (classical simulation)
-
-Combining MCTS, heuristics, and quantum computing
+**Search-based compression for Images / Audio / Video** with:
+- **Probe → Final** (cheap probe search, **single** full encode)
+- **Quality-aware constraints** (**SSIM** for images, **VMAF/SSIM** for video)
+- **MCTS-ish search + heuristics**
+- **Quantum-inspired sampling** (phase interference / |amp|²)
+- Optional **QAOA(p=1)** fusion (**classical statevector simulation**) to generate a **proposal prior** (Top-K candidates)
 
 **Author / Developer:** Hideyoshi Murakami  
-**X:** @nagisa7654321
-## X(Twitter): https://x.com/nagisa7654321
+**X:** @nagisa7654321 (https://x.com/nagisa7654321)
 
-## DOI (Zenodo)
-https://doi.org/10.5281/zenodo.18489982
+---
 
-## Qiita
-https://qiita.com/Hideyoshi_Murakami/items/38f80882013d6c22b44f
+## Links
+- **GitHub:** https://github.com/Eiryou/mcts-qaoa-guided-compression  
+- **Zenodo (DOI):** https://doi.org/10.5281/zenodo.18489982  
+- **Qiita:** https://qiita.com/Hideyoshi_Murakami/items/38f80882013d6c22b44f  
 
-> **Disclaimer**
-> This project does **not** claim quantum speedup or quantum hardware advantage.
-> “Quantum-inspired” and QAOA here are **classical heuristics / simulations** used to improve exploration and candidate prioritization.
+---
 
-##
-Why so many clones but few stars?
+## Why this matters
+Most compression tools require manual trial-and-error (codec, CRF/quality, bitrate, resize, presets…).  
+This project treats compression as an **optimization/search problem**:
 
-This is a “try locally” type of project.
-If this helped you, please consider starring ⭐ (it supports further development).
+1) **Probe** cheaply measures many candidates (downscaled image / first N seconds of media)  
+2) Builds an **energy landscape** `C(z)` from **size + distortion + time + penalties**  
+3) Uses **QAOA(p=1)** (classical simulation) and/or **quantum-inspired sampling** to propose promising candidates  
+4) Runs **Final** encoding **once** with the best candidate
 
+---
+
+## Disclaimer (Important)
+This project does **not** claim **quantum speedup** or **quantum hardware advantage**.  
+“Quantum-inspired” sampling and QAOA(p=1) are **classical heuristics / simulations** used to improve exploration and candidate prioritization.
+
+---
 
 ## Quick Start (Local)
 
 ```bash
 python -m venv .venv
+
 # Windows:
 .venv\Scripts\activate
+
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
+### Requirements
+- **Python 3.10+** recommended  
+- **ffmpeg** is required for audio/video optimization  
+- For **VMAF**, your ffmpeg must include **libvmaf** (your build does)
+
+---
+
 ## What’s inside
-- `apps/image_app.py` — Image Probe→Final optimizer (SSIM-based)
-- `apps/mmo_app.py` — Media Probe→Final optimizer (SSIM probe + optional VMAF refine + QAOA fusion)
-- `TECHNICAL.md` — deep technical explanation with QAOA equations and diagrams
-- `technical.txt` — plain-text technical explanation
-- `TECHNICAL.md — QAOA(p=1): energy landscape C(z) → probability P(z) → top-K candidate prioritization
+- `apps/image_app.py` — Image optimizer (**Probe → Final**, SSIM-based)  
+- `apps/mmo_app.py` — Media optimizer (**Probe → Final**, SSIM probe + optional VMAF + optional QAOA fusion)  
+- `TECHNICAL.md` — Deep technical explanation (QAOA equations + diagrams)  
+- `technical.txt` — Plain-text technical explanation  
+
+---
+
+## How it works (one-line summary)
+**QAOA(p=1) turns an energy landscape `C(z)` → a proposal distribution `P(z)` → prioritizes Top-K candidates** for the Probe stage.
+
+If you want the full math & diagrams:
+- See **TECHNICAL.md**
+
+---
+
+## Tips (practical)
+- Start with **Probe seconds = 6–10** for video; shorter is faster but noisier  
+- **VMAF is heavier** than SSIM → reduce trials, rely on **Top-K + a few random**  
+- Keep **Final = once** (design principle)
+
+---
+
+## Support / Feedback
+If this project helped you, consider giving it a ⭐ — it directly supports further development and documentation.
+
+Issues / suggestions are welcome:
+- GitHub Issues: https://github.com/Eiryou/mcts-qaoa-guided-compression/issues  
+- X: https://x.com/nagisa7654321  
+
+---
+
 ## License
 Licensed under the **Apache License 2.0**.
 
-**Attribution required:** Please retain the copyright notice and the `NOTICE` file
-when redistributing or creating derivative works, as required by Apache-2.0.
+**Attribution required:** Please retain the copyright notice and the `NOTICE` file when redistributing or creating derivative works, as required by Apache-2.0.
 
-**Optional request (non-binding):** If you redistribute a modified version, please notify
-the author via **GitHub Issues** or **X (Twitter)**: **@nagisa7654321**.
+**Optional request (non-binding):** If you redistribute a modified version, please notify the author via GitHub Issues or X: **@nagisa7654321**.
