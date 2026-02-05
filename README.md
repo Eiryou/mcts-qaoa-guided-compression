@@ -21,6 +21,13 @@ https://qiita.com/Hideyoshi_Murakami/items/38f80882013d6c22b44f
 > This project does **not** claim quantum speedup or quantum hardware advantage.
 > “Quantum-inspired” and QAOA here are **classical heuristics / simulations** used to improve exploration and candidate prioritization.
 
+##
+Why so many clones but few stars?
+
+This is a “try locally” type of project.
+If this helped you, please consider starring ⭐ (it supports further development).
+
+
 ## Quick Start (Local)
 
 ```bash
