@@ -1,5 +1,7 @@
 # Murakami Compressor Suite
 
+**“Compression is not a preset — it’s a search (Probe → Final).”**
+
 **Search-Based Compression** for Images + Audio/Video  
 with **Quantum-Inspired Sampling** and optional **QAOA(p=1) Fusion** (classical simulation)
 
