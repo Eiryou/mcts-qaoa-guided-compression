@@ -79,12 +79,13 @@ If you want the full math & diagrams:
 
 ---
 
+## Contact
+For comments, work, and collaborations, please contact us here 
+## murakami3tech6compres9sion@gmail.com   
+
 ## Support / Feedback
 If this project helped you, consider giving it a ⭐ — it directly supports further development and documentation.
 
-Issues / suggestions are welcome:
-- GitHub Issues: https://github.com/Eiryou/mcts-qaoa-guided-compression/issues  
-- X: https://x.com/nagisa7654321  
 
 ---
 
@@ -93,6 +94,4 @@ Licensed under the **Apache License 2.0**.
 
 **Attribution required:** Please retain the copyright notice and the `NOTICE` file when redistributing or creating derivative works, as required by Apache-2.0.
 
-## Contact
-For comments, work, and collaborations, please contact us here 
-## murakami3tech6compres9sion@gmail.com   
+
