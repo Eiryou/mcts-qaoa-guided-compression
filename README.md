@@ -2,6 +2,7 @@
 
 **Search-Based Compression** for Images + Audio/Video  
 with **Quantum-Inspired Sampling** and optional **QAOA(p=1) Fusion** (classical simulation)
+Combining MCTS, heuristics, and quantum computing
 
 **Author / Developer:** Hideyoshi Murakami  
 **X:** @nagisa7654321
