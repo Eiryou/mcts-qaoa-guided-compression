@@ -93,4 +93,6 @@ Licensed under the **Apache License 2.0**.
 
 **Attribution required:** Please retain the copyright notice and the `NOTICE` file when redistributing or creating derivative works, as required by Apache-2.0.
 
-**Optional request (non-binding):** If you redistribute a modified version, please notify the author via GitHub Issues or X: **@nagisa7654321**.
+## Contact
+For comments, work, and collaborations, please contact us here 
+## murakami3tech6compres9sion@gmail.com   
