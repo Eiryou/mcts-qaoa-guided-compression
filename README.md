@@ -1,7 +1,7 @@
 # Murakami Compressor Suite
 > **Compression is not a preset — it’s a search (Probe → Final).**
 
-## 2MB -> 200KB (50%~90% reduction) without changing extension
+## 2MB -> 200KB (10%~90% reduction) without changing extension
 
 **Search-based compression for Images / Audio / Video** with:
 - **Probe → Final** (cheap probe search, **single** full encode)
