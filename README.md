@@ -26,7 +26,7 @@ streamlit run app.py
 - `apps/mmo_app.py` — Media Probe→Final optimizer (SSIM probe + optional VMAF refine + QAOA fusion)
 - `TECHNICAL.md` — deep technical explanation with QAOA equations and diagrams
 - `technical.txt` — plain-text technical explanation
-
+- `TECHNICAL.md — QAOA(p=1): energy landscape C(z) → probability P(z) → top-K candidate prioritization
 ## License
 Licensed under the **Apache License 2.0**.
 
