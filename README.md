@@ -80,7 +80,7 @@ If you want the full math & diagrams:
 ---
 
 ## Support / Feedback
-If this project helped you, consider giving it a ⭐ — it directly supports further development and documentation.
+If this project helped you, consider giving it a STAR — it directly supports further development and documentation.
 
 Issues / suggestions are welcome:
 - GitHub Issues: https://github.com/Eiryou/mcts-qaoa-guided-compression/issues  
