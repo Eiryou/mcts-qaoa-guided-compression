@@ -13,7 +13,7 @@ Combining MCTS, heuristics, and quantum computing
 https://doi.org/10.5281/zenodo.18489982
 
 ## Qiita
-
+https://qiita.com/Hideyoshi_Murakami/items/38f80882013d6c22b44f
 
 > **Disclaimer**
 > This project does **not** claim quantum speedup or quantum hardware advantage.
