@@ -9,6 +9,12 @@ Combining MCTS, heuristics, and quantum computing
 **X:** @nagisa7654321
 ## X(Twitter): https://x.com/nagisa7654321
 
+## DOI (Zenodo)
+https://doi.org/10.5281/zenodo.18489982
+
+## Qiita
+
+
 > **Disclaimer**
 > This project does **not** claim quantum speedup or quantum hardware advantage.
 > “Quantum-inspired” and QAOA here are **classical heuristics / simulations** used to improve exploration and candidate prioritization.
