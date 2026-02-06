@@ -3,6 +3,8 @@
 
 ## 2MB -> 200KB (10%~90% reduction) without changing extension
 
+## CPU usage: negligible / RAM usage: minimal
+
 **Search-based compression for Images / Audio / Video** with:
 - **Probe → Final** (cheap probe search, **single** full encode)
 - **Quality-aware constraints** (**SSIM** for images, **VMAF/SSIM** for video)
