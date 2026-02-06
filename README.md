@@ -3,7 +3,9 @@
 
 ## 2MB -> 200KB (10%~90% reduction) without changing extension
 
-## CPU usage: negligible / RAM usage: minimal
+## CPU usage: negligible / RAM usage: minimal 
+
+My development test environment: Ryzen7 5700G/DDR4 64GB/GTX1070
 
 **Search-based compression for Images / Audio / Video** with:
 - **Probe → Final** (cheap probe search, **single** full encode)
