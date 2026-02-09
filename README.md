@@ -1,3 +1,5 @@
+## ![](https://github-visitor-counter-tau.vercel.app/api?username=Eiryou)
+
 # Murakami Compressor Suite
 > **Compression is not a preset — it’s a search (Probe → Final).**
 
